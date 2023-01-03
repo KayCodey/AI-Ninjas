@@ -33,17 +33,16 @@ body, html {
   height: 5vw; 
   width: 50%;
   box-sizing: border-box;
-  border: 0.5vw solid #FFFFFF;
+  border: 0.8vw solid #FFFFFF;
   display: flex;
   justify-content: center;
   text-align: center;
   align-items: center;
-  border-radius: 1vw;
+  border-radius: 1.8vw;
   margin-top: 5%;
   margin-left: 25%;
   font-size: 1.5vw;
-  font-weight: bolder;
-  letter-spacing: 0.5vw;
+  letter-spacing: 0.1vw;
 }
 
 /* Banner for submiting link */ 
@@ -52,7 +51,7 @@ input[type="submit"] {
     border-radius: 30vw;
     background-color: #06A0C2;
     font-size: 1.5vw;
-    font-style: bold;
+    font-style: 1000;
     width: 15vw;
     margin-left: 30vw;
     padding: 1vw;
@@ -74,7 +73,7 @@ fieldset {
     width: 75%;
     border-radius: 4.5vw;
     background-color: #FFFFFF;
-    margin-top: 5vw;
+    margin-top: 7vw;
     margin-left: 10vw;
     padding: 1vw;
  }
