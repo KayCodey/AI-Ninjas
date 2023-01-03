@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>AI Ninjas for AI Security</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<link rel="stylesheet" href="style.css">
+
+<!-- font -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+
+<!-- icon? -->
+<link rel="icon" type="image/x-icon" href="/images/favicon.ico">
+
+</head>
+<body>
+
+    <script src="js/script.js"></script>
+
+<div class="top-banner">
+    <div> 🥷 AI Ninjas for AI Security</div>
+</div>
+
+<div class="banner">
+  <p>are you being phished?</p>
+</div>
+
+<div>
+<fieldset>
+    <!-- type url or text -->
+    <!-- action to calculate if provided link is a phishing attempt - to do -->
+    <!-- <form> action="check link" -->
+    <form>
+    <div>    
+        <input type="url" id="link-to-be-checked" name="link-to-be-checked" placeholder="here you can paste the link ..." />     
+        <input type="submit" value="check"> 
+    </div>
+    </form>
+</fieldset>
+</div>
+
+<!-- box appearing after calculation - green meaning safe / red meaning danger - with some accuracy -->
+<div class="feedback-container" id="phishing-prediction"> 
+    <p id="output"></p>
+</div>
+
+</body> 
+</html>
