@@ -1,0 +1,97 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap'); 
+
+body,h1,h2,h3,h4,h5,h6 {
+    font-family: 'Open Sans', sans-serif;
+}
+
+body, html {
+  background-color: #375A79;
+}
+
+/* AI Ninjas for AI Security */
+.top-banner {
+    color: #535353;
+    height: 5vw;
+    width: 99vw;
+    box-sizing: border-box;
+    background-color: #D9D9D9;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    margin-top: 0;
+    margin-left: 0;
+    margin-right: 0;
+    font-size: 1.5vw;
+    font-weight: 1000;
+    letter-spacing: 0.2vw;
+}
+
+/* are you being phished ? */
+.banner {
+  color: #FFFFFF;
+  height: 5vw; 
+  width: 50%;
+  box-sizing: border-box;
+  border: 0.5vw solid #FFFFFF;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  border-radius: 1vw;
+  margin-top: 5%;
+  margin-left: 25%;
+  font-size: 1.5vw;
+  font-weight: bolder;
+  letter-spacing: 0.5vw;
+}
+
+/* Banner for submiting link */ 
+input[type="submit"] {
+    color: #FFFFFF;
+    border-radius: 30vw;
+    background-color: #06A0C2;
+    font-size: 1.5vw;
+    font-style: bold;
+    width: 15vw;
+    margin-left: 30vw;
+    padding: 1vw;
+}
+
+input[type="url"] {
+    width: 25vw;
+    border-top-style: hidden;
+    border-right-style: hidden;
+    border-left-style: hidden;
+    border-bottom-style: hidden;
+    margin-left: 1.5vw;
+    font-size: 1.5vw;
+    outline: none;
+}
+
+fieldset {
+    height: 4%;
+    width: 75%;
+    border-radius: 4.5vw;
+    background-color: #FFFFFF;
+    margin-top: 5vw;
+    margin-left: 10vw;
+    padding: 1vw;
+ }
+
+ /* Banner with calculated accuracy and feedback */
+.feedback-container {
+    color: #FFFFFF;
+    height: 15vw;
+    width: 99vw;
+    box-sizing: border-box;
+    background-color: #375A79;
+    font-size: 1.5vw;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    margin-top: 5.5vw;
+    margin-left: 0;
+    margin-bottom: 0;
+}
