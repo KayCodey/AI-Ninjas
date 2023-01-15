@@ -31,10 +31,10 @@
     <!-- type url or text -->
     <!-- action to calculate if provided link is a phishing attempt - to do -->
     <!-- <form> action="check link" -->
-    <form>
+    <form id="form">
     <div>    
         <input type="url" id="link-to-be-checked" name="link-to-be-checked" placeholder="here you can paste the link ..." />     
-        <input type="button" value="check" id = "checkButton">
+        <input type="submit" value="check" id = "checkButton">
     </div>
     </form>
 </fieldset>

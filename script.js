@@ -7,7 +7,10 @@ var outputParagraph  = document.getElementById("output")
 var backgroundDiv =  document.getElementById("phishing-prediction")
 var button = document.getElementById("checkButton")
 var linkInput = document.getElementById("link-to-be-checked")
-button.addEventListener("click", HandleLinkCheck);
+
+var form = document.getElementById("form")
+form.addEventListener("submit", HandleLinkCheck)
+
 
 class Link{
     constructor(link) {
@@ -15,12 +18,18 @@ class Link{
     }
 }
 
-function HandleLinkCheck()
+function HandleLinkCheck(e)
 {
+    if (e.preventDefault) {
+        e.preventDefault();
+    }
+
+
+    ResetText()
     console.log(linkInput.value)
     let link = linkInput.value
-
     GetAccuracy(link)
+    return false;
 }
 
 function GetAccuracy(link)
@@ -77,4 +86,9 @@ function SetText(isPhisingAttempt){
         outputParagraph.innerHTML =  "there is "+accuracy+"% of chance that provided link is not a phishing attempt";
         backgroundDiv.style.backgroundColor = "#77C676";
     }
+}
+
+function ResetText(){
+    outputParagraph.innerHTML = ""
+    backgroundDiv.style.backgroundColor = "#375A79"
 }

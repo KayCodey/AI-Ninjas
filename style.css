@@ -46,7 +46,7 @@ body, html {
 }
 
 /* Banner for submiting link */ 
-input[type="button"] {
+input[type="submit"] {
     color: #FFFFFF;
     border-radius: 30vw;
     background-color: #06A0C2;
