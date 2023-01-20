@@ -18,6 +18,13 @@ class Link{
     }
 }
 
+class Response{
+    constructor(result, percentage){
+        this.result = result
+        this.percentage = percentage
+    }
+}
+
 function HandleLinkCheck(e)
 {
     if (e.preventDefault) {
@@ -45,9 +52,10 @@ function GetAccuracy(link)
         {
             if (this.responseText !== "")
             {
-                let response = this.responseText
+                let response = JSON.parse(this.responseText);
 
-                if (response == "True"){
+                SetAccuracy(response.percentage)
+                if (response.result == "True"){
                     SetText(true)
                 }
                 else{
@@ -57,24 +65,13 @@ function GetAccuracy(link)
         }
     }
 
-    xmlhttp.open("POST", "http://130.162.38.93:20421/check", true);
+    xmlhttp.open("POST", "http://130.162.38.93:20421/check1", true);
     xmlhttp.setRequestHeader("Content-Type", "application/json");
     xmlhttp.send(json);
 }
 
 function SetAccuracy(a){
     accuracy = a
-
-    if (accuracy >=0 &&  accuracy <= 30) {
-        outputParagraph.innerHTML = "there is "+accuracy+"% of chance that provided link is a phishing attempt";
-        backgroundDiv.style.backgroundColor = "#77C676";
-    } else if (accuracy > 30 && accuracy < 60) {
-        outputParagraph.innerHTML = "there is "+accuracy+"% of chance that provided link is a phishing attempt";
-        backgroundDiv.style.backgroundColor = "#DD8D53";
-    } else if (accuracy >= 60 && accuracy <= 100) {
-        outputParagraph.innerHTML = "there is "+accuracy+"% of chance that provided link is a phishing attempt";
-        backgroundDiv.style.backgroundColor = "#E04E4E";
-    }
 }
 
 function SetText(isPhisingAttempt){
@@ -83,7 +80,7 @@ function SetText(isPhisingAttempt){
         backgroundDiv.style.backgroundColor = "#E04E4E";
     }
     else{
-        outputParagraph.innerHTML =  "there is "+accuracy+"% of chance that provided link is not a phishing attempt";
+        outputParagraph.innerHTML =  "there is "+(100 - accuracy)+"% of chance that provided link is not a phishing attempt";
         backgroundDiv.style.backgroundColor = "#77C676";
     }
 }
